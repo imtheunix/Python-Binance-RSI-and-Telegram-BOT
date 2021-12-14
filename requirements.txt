@@ -1,0 +1,6 @@
+websocket
+talib
+numpy
+json
+requests
+python-binance
