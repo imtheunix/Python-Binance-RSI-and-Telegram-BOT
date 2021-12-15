@@ -108,7 +108,7 @@ def on_message(ws, message):
             filter_buyer = dict_buyer.get("free")
             balance_buyer = (
                 float(filter_buyer) - float(filter_buyer) % 0.0001
-            )  # The same thing as above
+            )  # Another format to always place a order
             print(f"Avaible to buy: {balance_buyer}")
             buy_value = balance_buyer / price
             buy = "{:.4f}".format(float(buy_value))
