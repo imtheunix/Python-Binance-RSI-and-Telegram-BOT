@@ -21,4 +21,8 @@ assets = You must change the assets values if you want to trade another pair
 
 Basicaly, follow the comments of the code and you will run the bot.
 
+Second step you must start the bot python main.py:
+
+If you see only the price on your screen you didn't configured the API correctly
+
 It's not my responsibility if you lose or win money with this, this is just a example.
