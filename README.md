@@ -26,3 +26,5 @@ Second step you must start the bot python main.py:
 If you see only the price on your screen you didn't configured the API correctly
 
 It's not my responsibility if you lose or win money with this, this is just a example.
+
+V1.2 ADDED AROON OSCILATOR (OPTIONAL)

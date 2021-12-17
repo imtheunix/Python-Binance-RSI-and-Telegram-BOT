@@ -160,3 +160,35 @@ def on_message(ws, message):
 ws = websocket.WebSocketApp(socket, on_message=on_message)
 
 ws.run_forever()
+
+"""''
+
+This is an example on how to use Aroon oscilator. 
+
+aroon_time_period = 14
+closes, highs, lows = [], [], []
+
+def on_message(ws, message):
+  global closes, highs, lows, clear
+  client = Client(api_key, api_secret)
+  json_message = json.loads(message)
+  cs = json_message['k']
+  candle_closed, close, high, low = cs['x'], cs['c'], cs['h'], cs['l']
+
+    if candle_closed:
+        closes.append(float(close))
+        highs.append(float(high))
+        lows.append(float(low))
+        last_price = closes[-1]
+        aroon = talib.AROONOSC(np.array(highs),np.array(lows),aroon_time_period)
+        last_aroon = round(aroon[-1],2)
+
+        if last_aroon >= 70 and bought == 0:
+            bought = 1
+            buy()
+        
+        if last_aroon <= -70 and bought == 1:
+            bought = 0
+            sell()
+
+""" ""
